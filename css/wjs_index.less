@@ -1,0 +1,93 @@
+/* 微金所-响应式布局-首页样式 */
+.wjs_header{
+    border: 1px solid #ccc;
+    .container{
+        height: 50px;
+        line-height: 50px;
+        .row{
+            > div{
+                text-align: center;
+                &:nth-child(1),&:nth-child(2),&:nth-child(3){
+                    border-right: 1px solid #ccc;
+                }
+                &:nth-child(1){
+                    .wjs_qrcode{
+                        display: block;
+                        position: relative;
+                        &:hover{
+                            > img{
+                                display: block;
+                            }
+                        }
+                        > img{
+                            position: absolute;
+                            top: 49px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border: 1px solid #ccc;
+                            border-top: none;
+                            display: none;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    .btn{
+                        padding: 3px 15px;
+                    }
+                    .btn-danger{
+                        background-color: #e92322;
+                        border-color:#e92322; 
+                    }
+                    .btn-link{
+                        color: #333;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.wjs_nav{
+    /* 重置 brand 样式 */
+    .navbar-brand{
+        height: 80px;
+        padding-top: 0;
+        line-height: 80px;
+        font-size: 40px;
+        .wjs_icon_logo{
+            color: #e92322;
+        }
+        .wjs_icon_text{
+            color: #333;
+        }
+    }
+    .navbar-nav{
+        >li{
+            >a{
+                line-height: 50px;
+                font-size: 16px;
+                &:focus,&:hover{
+                    background-color: transparent;
+                    border-bottom: 3px solid #e92322;
+                }
+            }
+        }
+    }
+    .navbar-nav{
+        >.active{
+            >a{
+                background-color: transparent;
+                border-bottom: 3px solid #e92322;
+                &:hover,&:focus{
+                    background-color: transparent;//去除悬浮时的背景色
+                }
+            }
+        }
+    }
+    .navbar-toggle{
+        margin-top: 23px;
+    }
+
+}
