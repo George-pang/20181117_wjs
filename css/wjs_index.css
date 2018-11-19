@@ -29,6 +29,7 @@
   border: 1px solid #ccc;
   border-top: none;
   display: none;
+  z-index: 999;
 }
 .wjs_header .container .row > div:nth-child(4) .btn {
   padding: 3px 15px;
@@ -44,6 +45,7 @@
   text-decoration: none;
 }
 .wjs_nav {
+  margin-bottom: 0;
   /* 重置 brand 样式 */
 }
 .wjs_nav .navbar-brand {
@@ -77,4 +79,65 @@
 }
 .wjs_nav .navbar-toggle {
   margin-top: 23px;
+}
+.wjs_swiper .carousel-inner .item > a {
+  display: block;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wjs_swiper .carousel-inner .item > a > img {
+  width: 100%;
+}
+.wjs_info {
+  padding: 30px;
+}
+.wjs_info .wjs_icon {
+  font-size: 30px;
+}
+.wjs_info .container .row > div {
+  margin-top: 20px;
+}
+.wjs_info .container .row > div > a {
+  display: block;
+}
+.wjs_info .container .row > div > a:hover {
+  color: #e92322;
+}
+.wjs_reverse {
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.wjs_reverse .container .row > div .wjs_icon {
+  font-size: 18px;
+}
+.wjs_reverse .container .row > div .reverse-now {
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+.wjs_reverse .container .row > div > a:hover {
+  color: #e92322;
+}
+.wjs_partner {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+.wjs_partner .container .title {
+  text-align: center;
+}
+.wjs_partner .container .partner-list {
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  overflow: hidden;
+}
+.wjs_partner .container .partner-list .wjs_icon {
+  float: left;
+  margin: 0 10px;
+  font-size: 80px;
 }

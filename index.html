@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <!-- 头部块 -->
+    <!-- 头部块--Bootstrap栅格系统布局 -->
     <header class="wjs_header hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </header>
-    <!-- 导航栏 -->
+    <!-- 导航条--调用Bootstrap 导航条组件-->
     <nav class="navbar navbar-default wjs_nav">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -83,7 +83,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <!-- 左侧导航项列表-在sm屏幕下隐藏-->
+                <!-- 左侧导航项列表-在sm小屏幕下隐藏-->
                 <ul class="nav navbar-nav hidden-sm">
                     <li class="active"><a href="#">我要投资 <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">我要借贷</a></li>
@@ -99,25 +99,180 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <!-- 轮播图-调用Bootstrap 轮播图插件 -->
+    <!-- 响应式效果：<768px 轮播图宽度100%，高度自适应，>768px,轮播图高度不变，宽度拓展（背景图） -->
+    <div class="wjs_swiper">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators 分页器-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
 
-    <!-- 轮播图 -->
-    <div class="wjs_swiper"></div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力,存储的（自定义）数据能够被页面的 JavaScript 中利用 -->
+                <div class="item active" data-large-image="images/slide_01_2000x410.jpg" data-small-image="images/slide_01_640x340.jpg">
+                    <!-- 轮播图 幻灯片元素由js动态添加--避免响应式时资源无效加载 -->
+                </div>
+                <div class="item" data-large-image="images/slide_02_2000x410.jpg" data-small-image="images/slide_02_640x340.jpg">
+                </div>
+                <div class="item" data-large-image="images/slide_03_2000x410.jpg" data-small-image="images/slide_03_640x340.jpg">
+                </div>
+                <div class="item" data-large-image="images/slide_04_2000x410.jpg" data-small-image="images/slide_04_640x340.jpg">
+                </div>
+            </div>
+
+            <!-- Controls 滑动控制-->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
     <!-- 信息块 -->
-    <div class="wjs_info"></div>
+    <div class="wjs_info hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <!-- 带调用Bootstrap 媒体对象组件 -->
+                    <a href="#">
+                        <div class="media">
+                            <!-- 引用字体图标 -->
+                            <span class="media-left wjs_icon wjs_icon_E900">
+                            </span>
+                            <div class="media-body">
+                                <h4 class="media-heading">支持交易保障</h4>
+                                <p>银联支持全程保障支持安全</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 预约块 -->
-    <div class="wjs_reverse"></div>
+    <div class="wjs_reverse hidden-xs">
+        <div class="container">
+            <div class="row">
+                <!-- 向上兼容 -->
+                <div class="col-sm-9">
+                    <span class="wjs_icon wjs_icon_E906"></span>
+                    <span>现在的 272 人在排队，累计预约交易成功 7571 次</span>&nbsp;&nbsp;
+                    <a href="javascript:;">什么叫预约投标</a>
+                    <a href="javascript:;" class="reverse-now">立即预约</a>
+                </div>
+                <div class="col-sm-3">
+                    <span class="wjs_icon wjs_icon_E905"></span>
+                    <a href="javascript:;">微金所企业宣传片</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 产品块 -->
     <div class="wjs_product"></div>
     <!-- 新闻块 -->
     <div class="wjs_news"></div>
     <!-- 合作伙伴 -->
-    <div class="wjs_partner"></div>
+    <footer class="wjs_partner">
+        <div class="container">
+            <h3 class="title">合作伙伴</h3>
+            <ul class="partner-list">
+                <li class="wjs_icon wjs_icon_partner01"></li>
+                <li class="wjs_icon wjs_icon_partner02"></li>
+                <li class="wjs_icon wjs_icon_partner03"></li>
+                <li class="wjs_icon wjs_icon_partner04"></li>
+                <li class="wjs_icon wjs_icon_partner05"></li>
+                <li class="wjs_icon wjs_icon_partner06"></li>
+                <li class="wjs_icon wjs_icon_partner07"></li>
+                <li class="wjs_icon wjs_icon_partner08"></li>
+                <li class="wjs_icon wjs_icon_partner09"></li>
+            </ul>
+        </div>
+    </footer>
 
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="js/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wjs_index.js"></script>
 </body>
 
 </html>

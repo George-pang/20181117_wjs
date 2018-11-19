@@ -1,4 +1,6 @@
 /* 微金所-响应式布局-首页样式 */
+@baseColor:#e92322;
+
 .wjs_header{
     border: 1px solid #ccc;
     .container{
@@ -27,6 +29,7 @@
                             border: 1px solid #ccc;
                             border-top: none;
                             display: none;
+                            z-index: 999;
                         }
                     }
                 }
@@ -50,6 +53,7 @@
     }
 }
 .wjs_nav{
+    margin-bottom: 0;
     /* 重置 brand 样式 */
     .navbar-brand{
         height: 80px;
@@ -90,4 +94,86 @@
         margin-top: 23px;
     }
 
+}
+.wjs_swiper{
+    .carousel-inner{
+        .item{
+            >a{
+                display: block;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                >img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.wjs_info{
+    padding: 30px;
+    .wjs_icon{
+        font-size: 30px;
+    }
+    .container{
+        .row{
+            >div{
+                margin-top: 20px;
+                >a{
+                    display: block;
+                    &:hover{
+                        color: #e92322;
+                    }
+                }
+            }
+        }
+    }
+}
+.wjs_reverse{
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    .container{
+        .row{
+            >div{
+                .wjs_icon{
+                    font-size: 18px;
+                }
+                .reverse-now{
+                    color: @baseColor;
+                    border-bottom: 1px dashed @baseColor;
+                }
+                >a{
+                    &:hover{
+                        color: @baseColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.wjs_partner{
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    .container{
+        // text-align: center;
+        .title{
+            text-align: center;
+        }
+        .partner-list{
+            padding: 0;
+            display: inline-block;//text-align只对行内块生效，改变display类型使其水平居中
+            list-style: none;
+            overflow: hidden;
+            .wjs_icon{
+                float: left;
+                margin: 0 10px;
+                font-size: 80px;
+            }
+        }
+    }
 }
