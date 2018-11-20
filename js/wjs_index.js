@@ -1,6 +1,7 @@
 $(function () {
 
-    /* 注册浏览器窗口大小改变事件 */
+    /* 1、swipper块：判断窗口大小，js动态插入轮播图幻灯片内子元素(image或者背景图)*/
+    //注册浏览器窗口大小改变事件 
     $(window).on("resize", function () {
         // 获取当前的窗口大小
         var screen_width = $(window).width();
@@ -30,19 +31,19 @@ $(function () {
             });
         }
     });
-    // 初次加载时，窗口事件没有触发，页面元素为空，需要手动触发一次
+    ///初次加载时，窗口事件没有触发，页面元素为空，需要手动触发一次
     $(window).trigger("resize");
 
-    /*添加移动端的滑动切换轮播图操作 start*/
+    /*2、添加移动端的滑动切换轮播图操作 start*/
     var startX, endX;
     var carousel_inner = $(".carousel-inner")[0];
 
-    /*获取当前轮播图*/
+    //获取当前轮播图
     var carousel = $(".carousel");
-    
+
     // 监测触摸开始与结束事件，获取当前位置。根据位置判断是上一张还是下一张
     carousel_inner.addEventListener("touchstart", function (e) {
-        console.dir(e);//打印TouchEvent对象信息
+        console.dir(e); //打印TouchEvent对象信息
         startX = e.targetTouches[0].clientX;
     });
     carousel_inner.addEventListener("touchend", function (e) {
@@ -56,5 +57,30 @@ $(function () {
         }
     });
     /*添加移动端的滑动操作 end*/
+
+    /*3、产品块：初始化Bootstrap tooltip插件 */
+    $('[data-toggle="tooltip"]').tooltip();
+    /* 初始化tooltip end */
+
+    /*4、产品块 导航tab标签的左右水平滑动 */
+    //获取所有li的实际宽度和(所有li宽度和)--
+    var totalWidth = 0;
+    var ulObj = $(".wjs_product .nav-tabs");
+    var lis = ulObj.find("li");
+    lis.each(function (index, ele) {
+        totalWidth += $(this).innerWidth(); //innerWidth() 内容宽度+padding
+        // console.log($(this).innerWidth());
+    });
+    // console.log(totalWidth);
+    ulObj.width(totalWidth); //固定宽度,避免宽度100%自动换行适应
+    //初始化iscroll.js插件--参数1：选择器，选择区域
+    var myScroll = new IScroll('.tabs_parent', {
+        /*设置水平滑动，不允许垂直滑动*/
+        scrollX: true,
+        scrollY: false
+    });
+    /* 导航tab标签水平滑动 end */
+
+
 
 });
