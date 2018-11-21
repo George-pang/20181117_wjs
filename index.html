@@ -65,6 +65,7 @@
     <nav class="navbar navbar-default wjs_nav">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- 移动端响应样式：品牌+手风琴组件 -->
             <div class="navbar-header">
                 <!-- 手风琴组件 -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -249,8 +250,9 @@
     <div class="wjs_product">
         <!-- 调用Bootstrap 标签页插件 -->
         <div class="container">
-            <!-- Nav tabs -->
+            <!-- 调用iscroll.js的容器，实现导航tab水平滑动-->
             <div class="wrapper tabs_parent">
+                <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#p1" aria-controls="p1" role="tab" data-toggle="tab">特别推荐</a></li>
                     <li role="presentation"><a href="#p2" aria-controls="p2" role="tab" data-toggle="tab">微投资</a></li>
@@ -422,6 +424,7 @@
         <div class="container">
             <div class="row">
                 <!-- 列偏移 -->
+                <!-- 只设置了md屏幕下的占比，在md屏幕宽度以下(992px以下每个都会自动占据布局容器宽度的100%) -->
                 <div class="col-md-2 col-md-offset-2">
                     <h3 class="wjs_nTitle">全部新闻</h3>
                 </div>
@@ -515,7 +518,7 @@
     <script src="js/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- 引用导航条水平左右滑动js插件 -->
+    <!-- 引用导航条水平左右滑动js插件 ，另外还需要在js中根据布局容器进行一次js代码初始化才能生效-->
     <script src="js/iscroll.js"></script>
     <script src="js/wjs_index.js"></script>
 </body>
